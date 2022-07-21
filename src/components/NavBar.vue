@@ -54,4 +54,6 @@ export default {
             border: none
             color: white
             border-radius: .25em
+        button:hover
+            cursor: pointer
 </style>
