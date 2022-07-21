@@ -1,16 +1,16 @@
 <template>
-  <!-- <NavBar></NavBar> -->
-  <HamBurger></HamBurger>
-  <router-view/>
+	<NavBar class="desktop-menu"></NavBar>
+	<HamBurger class="mobile-menu"></HamBurger>
+	<router-view/>
 </template>
 <script>
-// import NavBar from './components/NavBar.vue'
+import NavBar from './components/NavBar.vue'
 import HamBurger from './components/HamBurger.vue'
 export default {
-  name: 'App',
-  components: {
-    // NavBar,
-    HamBurger
+	name: 'App',
+	components: {
+		NavBar,
+		HamBurger,
   }
 }
 </script>
@@ -19,4 +19,14 @@ export default {
   margin: 0
   padding: 0
   box-sizing: border-box
+@media (max-width: 400px)
+	.desktop-menu
+		display: none
+
+@media (min-width: 401px)
+	.mobile-menu
+		display: none
+
+
+
 </style>

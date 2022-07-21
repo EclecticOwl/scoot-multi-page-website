@@ -21,7 +21,7 @@ export default {
     name: 'HamBurger',
     data() {
 		return {
-			isActive: true
+			isActive: false
 		}
 	},
 }
