@@ -19,11 +19,11 @@ export default {
   margin: 0
   padding: 0
   box-sizing: border-box
-@media (max-width: 400px)
+@media (max-width: 460px)
 	.desktop-menu
 		display: none
 
-@media (min-width: 401px)
+@media (min-width: 461px)
 	.mobile-menu
 		display: none
 

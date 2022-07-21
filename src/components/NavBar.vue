@@ -33,25 +33,20 @@ export default {
     display: flex
     justify-content: space-around
     padding: 1em 0
-
     img
         height: 25px
         width: auto
-
     a
         color: #B4B6BC
         text-decoration: none
-
     .menu-links
         display: flex
         align-items: center
-        gap: 2em
-
+        gap: 1.5em
     .menu-cta
         display: flex
         justify-content: center
         align-items: center
-
         button
             height: 100%
             padding: .75em 2em
