@@ -13,7 +13,38 @@
 				<img :src="whiteCircles" alt="white circles used to decorate page">
 			</div>
 		</div>
-		
+		<div class="three-column">
+			<div class="three-column-item">
+				<img src="@/assets/icons/locate.svg?inline" alt="locate icon">
+				<div class="three-column-info">
+					<h2>Locate with app</h2>
+					<p>
+					Use the app to find the nearest scooter to you. We are continuously placing scooters 
+	in the areas with most demand, so one should never be too far away. 
+					</p>
+				</div>
+			</div>
+			<div class="three-column-item">
+				<img src="@/assets/icons/scooter.svg?inline" alt="scooter icon">
+				<div class="three-column-info">
+					<h2>Pick your scooter</h2>
+					<p>
+						We show the most important info for the scooters closest to you. So you know how much 
+	charge they have left and can see roughly how much it will cost.
+					</p>
+				</div>
+			</div>
+			<div class="three-column-item">
+				<img src="@/assets/icons/ride.svg?inline" alt="ride icon">
+				<div class="three-column-info">
+					<h2>Enjoy the ride</h2>
+					<p>
+						Scan the QR code and the bike will unlock. Retract the cable lock, put on a helmet, 
+	and you're off! Always lock bikes away from walkways and accessibility ramps.
+					</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -35,9 +66,9 @@ export default {
 <style lang="sass" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap')
 .home
-	color: white
 	font-family: 'Space Mono', monospace
 .hero-container
+	color: white
 	position: relative
 	background-image: url('@/assets/images/home-hero-desktop.jpg')
 	background-size: contain no-repeat
@@ -90,7 +121,66 @@ export default {
 	bottom: 120px
 	right: 0
 	transform: translateX(50px)
-@media (max-width: 1150px)
+.three-column
+	margin-top: 7em
+	display: flex
+	padding-left: 7em
+	gap: 3em
+	position: relative
+
+	img
+		height: 75px
+		width: auto
+	h2
+		font-size: 1.2em
+		color: #495567
+	p
+		font-size: .5em
+		color:  #939CAA
+.three-column::before
+		position: absolute
+		bottom: 70%
+		left: 0
+		content: ' '
+		background-image: url('@/assets/patterns/line.svg?inline')
+		background-size: cover
+		filter: grayscale(100%)
+		z-index: -1
+		height: 10px
+		width: 875px
+.three-column-item
+		width: 325px
+
+
+@media (max-width: 1100px)
+	.three-column
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		max-width: 100%
+	.three-column::before
+		display: none
+	.three-column::after
+		position: absolute
+		content: ' '
+		top: 0
+		left: 10px
+		background-image: url('@/assets/patterns/line.svg?inline')
+		background-size: cover
+		filter: grayscale(100%)
+		z-index: -1
+		height: 10px
+		width: 800px
+		transform: rotate(90deg) translateY(16.5em)
+		
+	.three-column-item
+		display: flex
+		width: 100%
+		gap:  6em
+		p
+			margin-top: 3em
+			width: 200px
+		
 	.hero-text
 		align-items: center
 		justify-content: flex-start
@@ -114,6 +204,19 @@ export default {
 	.hero-bubbles
 		bottom: 20px
 @media (max-width: 500px)
+	.three-column::after
+		display: none
+	.three-column
+		padding-left: 0
+	.three-column-item
+		gap: 1em
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		img
+			width: 75px
+	.three-column-info
+		text-align: center
 	.hero-text::before
 		bottom: 5%
 		height: 110px
