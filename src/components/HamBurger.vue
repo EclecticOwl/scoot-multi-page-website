@@ -7,10 +7,10 @@
 		</div>
         <div class="menu" :class="{ showMenu: isActive}">
             <div class="menu-links">
-                <router-link to="/">Home</router-link>
-                <router-link to="/about">About</router-link>
-                <router-link to="/careers">Careers</router-link>
-                <router-link to="/locations">Locations</router-link>
+                <router-link @click="isActive = !isActive" to="/">Home</router-link>
+                <router-link @click="isActive = !isActive" to="/about">About</router-link>
+                <router-link @click="isActive = !isActive" to="/careers">Careers</router-link>
+                <router-link @click="isActive = !isActive" to="/locations">Locations</router-link>
             </div>
         </div>
   </nav>
