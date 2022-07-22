@@ -106,6 +106,7 @@ export default {
 .home
 	font-family: 'Space Mono', monospace
 	font-size: .8em
+	overflow: hidden
 .hero-container
 	color: white
 	position: relative
