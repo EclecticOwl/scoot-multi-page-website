@@ -196,11 +196,13 @@ p
 header
 	background-image: url('@/assets/images/about-hero-desktop.jpg')
 	height: 200px
+	width: auto
 	display: flex
 	align-items: center
 	padding-left: 5em
 	color: white
 	font-size: 1.5em
+	overflow: hidden
 main
 	overflow: hidden
 .main-col-1, .main-col-2
@@ -274,6 +276,7 @@ section
 	align-items: center
 	gap: 6em
 	padding: 0 2em
+	overflow: hidden
 	h1
 		font-size: 1.7em
 .value-container

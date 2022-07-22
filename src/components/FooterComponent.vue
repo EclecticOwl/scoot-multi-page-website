@@ -98,6 +98,7 @@ a
 	.footer-top
 		justify-content: center
 		gap: 3em
+		padding: 1em
 	.footer-bottom, .footer-links
 		display: flex
 		flex-direction: column

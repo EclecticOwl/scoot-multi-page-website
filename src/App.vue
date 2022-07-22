@@ -1,7 +1,7 @@
 <template>
 	<NavBar class="desktop-menu"></NavBar>
 	<HamBurger class="mobile-menu"></HamBurger>
-	<router-view/>
+	<router-view class="overflow" />
 	<FooterComponent></FooterComponent>
 </template>
 <script>
@@ -19,6 +19,7 @@ export default {
 </script>
 <style lang="sass">
 *
+
   margin: 0
   padding: 0
   box-sizing: border-box
@@ -30,6 +31,9 @@ export default {
 	.mobile-menu
 		display: none
 
-
+html,body 
+    margin: 0
+    padding: 0
+    overflow-x:	hidden
 
 </style>
