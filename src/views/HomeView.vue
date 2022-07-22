@@ -45,6 +45,44 @@
 				</div>
 			</div>
 		</div>
+		<main>
+			<div class="main-col-1">
+				<div class="main-col-img">
+					<img src="@/assets/images/telemetry.jpg" alt="picture of person holding phone">
+				</div>
+				<div class="main-col-info">
+					<h1>Easy to use riding telemetry</h1>
+					<p>The Scoot app is available with riding telemetry. This means it can show you your 
+  average speed, how long you've been using the scooter, your traveling distance, 
+  and many more things all in an easy to use app.</p>
+					<a class="main-col-cta" href="">Learn more</a>
+				</div>
+			</div>
+			<div class="main-col-2">
+				<div class="main-col-img">
+					<img src="@/assets/images/near-you.jpg" alt="picture of city">
+				</div>
+				<div class="main-col-info">
+					<h1>Coming to a city near you</h1>
+					<p>Scoot is available in 4 major cities so far. We're expanding rapidly, so be sure 
+  to let us know if you want to see us in your hometown. We're aiming to let our 
+  scooters loose on 23 cities over the coming year.</p>
+					<a class="main-col-cta" href="">Learn more</a>
+				</div>
+			</div>
+			<div class="main-col-3">
+				<div class="main-col-img">
+					<img src="@/assets/images/payments.jpg" alt="picture of person holding wallet">
+				</div>
+				<div class="main-col-info">
+					<h1>Zero hassle payments</h1>
+					<p>Our payment is as easy as one two three. We accept most credit cards and debit cards. 
+  You can also link your PayPal account inside the app. Need to pay later? No worries! 
+  You can defer payment for up to a month.</p>
+					<a class="main-col-cta" href="">Learn more</a>
+				</div>
+			</div>
+		</main>
 	</div>
 </template>
 
@@ -67,6 +105,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap')
 .home
 	font-family: 'Space Mono', monospace
+	font-size: .8em
 .hero-container
 	color: white
 	position: relative
@@ -132,14 +171,13 @@ export default {
 		height: 75px
 		width: auto
 	h2
-		font-size: 1.2em
 		color: #495567
 	p
-		font-size: .5em
+		
 		color:  #939CAA
 .three-column::before
 		position: absolute
-		bottom: 70%
+		bottom: 80%
 		left: 0
 		content: ' '
 		background-image: url('@/assets/patterns/line.svg?inline')
@@ -150,9 +188,104 @@ export default {
 		width: 875px
 .three-column-item
 		width: 325px
+main
+	margin-top: 7em
+.main-col-1, .main-col-2, .main-col-3
+	margin-top: 6em
+	display: flex
+	flex-direction: row-reverse
+	justify-content: space-around
+	gap: 10em
+	position: relative
+	p
+		color: #939CAA
+	p, h1
+		width: 500px
+		margin-bottom: 2em
+	img
+		height: 300px
+		border-radius: 10em
+	a
+		text-decoration: none
+		background-color: #F2BA4B
+		padding: .5em 2em
+		color: white
+.main-col-2
+	flex-direction: row
 
-
+.main-col-1::after, .main-col-3::after
+	position: absolute
+	top: 0
+	right: 0
+	content: ' '
+	background-image: url('@/assets/patterns/circle.svg?inline')
+	background-size: contain
+	height: 300px
+	width: 300px
+	transform: translateX(220px)
+.main-col-2:after
+	position: absolute
+	top: 0
+	left: 0
+	content: ' '
+	background-image: url('@/assets/patterns/circle.svg?inline')
+	background-size: contain
+	height: 300px
+	width: 300px
+	transform: translateX(-220px)
+.main-col-1::before
+	position: absolute
+	top: 0
+	right: 0
+	content: ' '
+	background-image: url('@/assets/patterns/left-downward-arrow.svg?inline')
+	background-size: cover
+	background-size: no-repeat
+	z-index: 1
+	height: 140px
+	width: 550px
+	transform: translate(120px, 200px)
+.main-col-2::before
+	position: absolute
+	top: 0
+	left: 0
+	content: ' '
+	background-image: url('@/assets/patterns/right-arrow.svg?inline')
+	background-size: cover
+	background-size: no-repeat
+	z-index: 1
+	height: 130px
+	width: 400px
+	transform: translateX(-140px)
+.main-col-3::before
+	position: absolute
+	top: 0
+	right: 0
+	content: ' '
+	background-image: url('@/assets/patterns/left-downward-arrow.svg?inline')
+	background-size: cover
+	background-size: no-repeat
+	z-index: 1
+	height: 140px
+	width: 550px
+	transform: translate(300px, 50px)
 @media (max-width: 1100px)
+	.main-col-1, .main-col-2, .main-col-3
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		gap: 5em
+		h1, p
+			margin-top: 1em
+	.main-col-info
+		padding: 0 2em
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		a
+			width: 150px
+			text-align: center
 	.three-column
 		flex-direction: column
 		justify-content: center
@@ -164,15 +297,14 @@ export default {
 		position: absolute
 		content: ' '
 		top: 0
-		left: 10px
+		left: 0
 		background-image: url('@/assets/patterns/line.svg?inline')
 		background-size: cover
 		filter: grayscale(100%)
 		z-index: -1
 		height: 10px
-		width: 800px
-		transform: rotate(90deg) translateY(16.5em)
-		
+		width: 1000px
+		transform: rotate(90deg) translateY(29em)
 	.three-column-item
 		display: flex
 		width: 100%
@@ -180,7 +312,6 @@ export default {
 		p
 			margin-top: 3em
 			width: 200px
-		
 	.hero-text
 		align-items: center
 		justify-content: flex-start
@@ -190,7 +321,6 @@ export default {
 		h1
 			margin-top: 1em
 			text-align: center
-	
 	.hero-text::before
 		position: absolute
 		bottom: 5%
@@ -200,10 +330,18 @@ export default {
 		background-size: cover
 		height: 100px
 		width: 300px
-		
 	.hero-bubbles
 		bottom: 20px
 @media (max-width: 500px)
+	
+	.main-col-1::before, .main-col-3::before
+		transform: translate(300px, 200px)
+	.main-col-1::after, .main-col-2::after, .main-col-3::after
+		display: none
+	.main-col-info
+		text-align: center
+		p, h1
+			width: 300px
 	.three-column::after
 		display: none
 	.three-column
