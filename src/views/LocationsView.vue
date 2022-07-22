@@ -124,6 +124,10 @@ section
         color: white
         padding: .5em 1em
 @media (max-width: 800px)
+    header
+        display: flex
+        justify-content: center
+        padding: 4em 0
     main
         img
             width: 100%

@@ -334,7 +334,10 @@ main
 	.hero-bubbles
 		bottom: 20px
 @media (max-width: 500px)
-	
+	header
+		display: flex
+		justify-content: center
+		padding: 4em 0
 	.main-col-1::before, .main-col-3::before
 		transform: translate(300px, 200px)
 	.main-col-1::after, .main-col-2::after, .main-col-3::after

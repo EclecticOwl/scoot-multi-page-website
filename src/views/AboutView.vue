@@ -356,6 +356,10 @@ section
 		flex-direction: column
 
 @media (max-width: 500px)
+	header
+		display: flex
+		justify-content: center
+		padding: 4em 0
 	.faq-item
 		width: 350px
 	.main-col-1::after, .main-col-2::after

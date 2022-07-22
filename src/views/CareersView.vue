@@ -246,6 +246,10 @@ section
 	.value-container
 		flex-direction: column
 @media (max-width: 500px)
+	header
+		display: flex
+		justify-content: center
+		padding: 4em 0
 	section
 		padding: 0 1em
 	.main-col-1::after, .main-col-1::before
